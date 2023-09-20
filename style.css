@@ -1,0 +1,733 @@
+html,
+body {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+body {
+  color: #f9f9f9;
+  background-color: #bd7344;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  line-height: 1.2;
+}
+
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0 0 24px;
+}
+
+h1 {
+  font-size: 44px;
+}
+
+h2 {
+  font-size: 42px;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+p {
+  line-height: 1.5;
+}
+
+.presentation h1 {
+  margin: 0 0 30px;
+}
+
+section {
+  position: relative;
+  overflow: hidden;
+}
+
+a:focus,
+a:hover {
+  color: #f9f9f9;
+}
+
+section li,
+section p,
+.itemRichtext p,
+.richtext p,
+.links {
+  color: hsla(0, 0%, 75.3%, 0.8);
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.textLeft {
+  text-align: left;
+}
+
+/* keyframes */
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-7px);
+  }
+  60% {
+    transform: translateY(-3.5px);
+  }
+}
+
+/* Richtext */
+
+.plan .richtext h2,
+.plan .richtext h3,
+.plan .richtext h4,
+.plan .richtext h5 {
+  margin-bottom: 8px;
+}
+
+.richtext h2 span,
+.richtext h3 span,
+.richtext h4 span,
+.richtext h5 span {
+  opacity: 0.7;
+  display: inline;
+  font-size: 14px;
+}
+
+.plan .richtext p {
+  margin-bottom: 16px;
+}
+
+.richtext p,
+.presentationInfo,
+.links,
+.secondary {
+  color: hsla(0, 0%, 75.3%, 0.8);
+}
+
+section .richtext li,
+section .richtext p {
+  font-size: 20px;
+}
+
+.richtext p {
+  margin-bottom: 16px;
+}
+
+/* Presentation */
+
+.presentation,
+.presentation .presentationContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.presentation .presentationContent {
+  width: 100%;
+  position: relative;
+  padding: 80px;
+  min-height: 100vh;
+  justify-content: center;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+.presentation .contentPresentation {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+}
+
+.presentation.plan2 .contentPresentation {
+  max-width: 632px;
+}
+
+body .presentation.plan2 .contentPresentation {
+  max-width: 680px;
+}
+
+.presentation.textLeft .contentPresentation {
+  margin-right: auto;
+  margin-left: 0;
+}
+
+.presentation h1 {
+  margin: 0 0 30px;
+}
+
+/* Presentation Logo */
+
+.presentation .logo.small {
+  width: 42%;
+  max-width: 160px;
+}
+
+.logo img {
+  display: block;
+  width: 100%;
+}
+
+.logo {
+  font-size: 0;
+  display: inline-block;
+}
+
+/* Presentation Plans */
+.presentationContent .presentationPlans {
+  margin: 0 -16px 20px;
+}
+
+.presentation .presentationPlans .plan {
+  width: 50%;
+  max-width: 360px;
+  box-sizing: border-box;
+  padding: 0 16px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.presentation .presentationInfo {
+  max-width: 100%;
+}
+
+.presentationInfo {
+  font-size: 12px;
+}
+
+/* Button */
+.buttonGroup {
+  letter-spacing: 20px;
+}
+
+.btnPrimary {
+  letter-spacing: 0.8px;
+  width: 100%;
+  max-width: 340px;
+  min-width: auto;
+  margin-bottom: 20px;
+  font-size: 18px;
+  padding: 16.5px 14px;
+  margin-bottom: 30px;
+  color: #f9f9f9;
+  background-color: #d7b957;
+  border: 1px solid transparent;
+  text-transform: uppercase;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 4px;
+  box-sizing: border-box;
+  vertical-align: middle;
+  text-decoration: none;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 1px;
+  transition: all 0.2s ease 0s;
+}
+
+.presentation .presentationPlans .plan .btnPrimary {
+  width: 100%;
+  max-width: 340px;
+  min-width: auto;
+  margin-bottom: 0;
+}
+
+.presentation .hint {
+  position: absolute;
+  bottom: 30px;
+  right: 80px;
+  left: 80px;
+  z-index: 1;
+}
+
+.presentation .hint {
+  -webkit-animation: bounce 1.75s infinite;
+  animation: bounce 1.75s infinite;
+}
+
+.presentation .hint a {
+  color: hsla(0, 0%, 100%, 0.65);
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+}
+
+.presentation .hint a svg {
+  fill: #f9f9f9;
+  width: 32px;
+  margin-top: 5px;
+}
+
+/* BackgroundImage */
+.presentation .presentationBackgroundImage {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 200%;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.presentation .presentationBackgroundImage {
+  transition-timing-function: ease-out;
+  transition: opacity 0.5s;
+  transition-delay: 0.1s;
+  opacity: 0;
+}
+
+.presentation .presentationBackgroundImage {
+  opacity: 1;
+  bottom: 0;
+  height: 100%;
+}
+
+.presentation .presentationBackgroundImage.large {
+  display: block;
+}
+
+.presentation .presentationBackgroundImage.small {
+  display: none;
+}
+
+.presentationBackgroundImage.large {
+  background-image: linear-gradient(
+      to right,
+      rgba(168, 41, 60, 1),
+      rgba(0, 0, 0, 0)
+    ),
+    url(img/plat-liban-header.jpg);
+  height: 100%;
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.presentationBackgroundImage.small {
+  background-image: linear-gradient(
+      to top,
+      rgba(168, 41, 60, 1),
+      rgba(0, 0, 0, 0)
+    ),
+    url(img/plat-liban-header.jpg);
+  height: 100%;
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Content */
+section .target {
+  position: absolute;
+  top: -100px;
+  height: 101px;
+  width: 1px;
+}
+
+section.sidealign .content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+section .content {
+  z-index: 1;
+  padding: 80px;
+  position: relative;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+section.textContainerRight .content {
+  flex-direction: row-reverse;
+}
+
+section.sidealign.textContainerLeft .content .contentText,
+section.sidealign.textContainerRight .content .contentText {
+  padding: 0 4%;
+}
+
+section.sidealign .content .contentText {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 0 4% 0 0;
+  margin-top: 20px;
+  width: 50%;
+}
+
+section.sidealign .contentText {
+  flex: 0 0 auto;
+}
+
+section .contentText {
+  z-index: 1;
+  box-sizing: border-box;
+}
+
+section.sidealign .contentImg {
+  flex: 1 1 auto;
+}
+
+section .contentImg,
+section .contentText,
+section .presentationContent {
+  min-height: 1px;
+}
+
+section .contentImg {
+  width: auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* Img */
+section .contentImg img {
+  display: block;
+  width: 100%;
+}
+
+/* Grid */
+section.grid1 .grid,
+section.grid2 .grid,
+section.grid3 .grid,
+section.grid4 .grid,
+section.grid5 .grid,
+section.row3 .grid {
+  margin: 0 -12px;
+}
+
+.grid3 .gridItem {
+  width: 33%;
+}
+
+.grid2 .gridItem {
+  width: 49%;
+}
+
+.grid .gridItem {
+  display: inline-block;
+  box-sizing: border-box;
+  vertical-align: top;
+  padding: 12px;
+  transition: opacity 1s;
+}
+
+.grid .gridItem .contentCell {
+  display: inline-block;
+  width: 100%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+}
+
+.grid .thumb .contentImage {
+  border-radius: 4px;
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 50%;
+}
+
+.grid .gridItem img {
+  transition: transform 0.4s;
+  display: inline-block;
+  vertical-align: bottom;
+  width: 100%;
+}
+
+/* Device */
+.grid .device .contentImage {
+  filter: hue-rotate(90deg) invert(1);
+  overflow: hidden;
+  margin: auto;
+  width: 40%;
+  height: auto;
+}
+
+/* Footer */
+footer {
+  position: relative;
+  z-index: 1;
+  padding: 26px 8px;
+  text-align: center;
+}
+
+footer .content {
+  margin: 0 auto;
+}
+
+footer .logo {
+  width: 80px;
+  margin-bottom: 4px;
+}
+
+footer .links a {
+  font-size: 12px;
+  cursor: pointer;
+  padding: 8px 12px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* Mobile case */
+/* Case max 768px */
+@media only screen and (max-width: 768px) {
+  .presentation.mobileTextCenter {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .presentation .presentationContent {
+    min-height: 100vh;
+    /* margin-top: 28%; */
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .presentation .presentationContent .logo.small {
+    margin-bottom: 10px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .presentation h1 {
+    margin: 0 0 10px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  h2,
+  h3,
+  h4,
+  h5 {
+    margin: 0 0 16px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .presentationContent .presentationPlans {
+    margin: 0 auto 20px;
+    max-width: 340px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .presentation .plan,
+  .presentation.plan2 .presentationPlans .plan {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .presentation .presentationPlans .plan {
+    position: relative;
+    width: 100%;
+    max-width: none;
+    display: block;
+    padding: 15px 0;
+    border-bottom: 2px solid hsla(0, 0%, 100%, 0.2);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .presentation .presentationPlans .plan {
+    padding-top: 0;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .presentation.mobileTextCenter p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  p {
+    margin: 0 0 20px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .plan .richtext h2,
+  .plan .richtext h3,
+  .plan .richtext h4,
+  .plan .richtext h5,
+  .plan .richtext p {
+    margin-bottom: 5px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .presentation .presentationBackgroundImage.small {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  section.sidealign.textContainerRight .content,
+  section.sidealign.textContainerLeft .content {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  section.sidealign .content {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  section.sidealign.textContainerLeft .contentText,
+  section.sidealign.textContainerRight .contentText {
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  section.sidealign .content .contentText {
+    padding: 0;
+    width: 100% important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  section .contentText {
+    width: auto !important;
+    padding: 0;
+    display: block;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  section.sidealign .contentImg {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .gridMobile2 .gridItem {
+    width: 49%;
+  }
+}
+
+/* Case max 479px */
+@media only screen and (max-width: 479px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  .presentation .presentationContent {
+    padding: 80px 20px;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  h1 {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  h3 {
+    font-size: 24px;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  section .gridItem .itemHead,
+  section .richtext li,
+  section .richtext p {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  .buttonGroup {
+    letter-spacing: 16px;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  .btnPrimary {
+    min-width: 200px;
+    font-size: 15px;
+    padding: 11.5px 12px;
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  .presentation .hint {
+    right: 20px;
+    left: 20px;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  .presentationInfo {
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  section .content {
+    padding: 40px 20px;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  .xLarge {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .presentation .presentationPlans {
+    display: flex;
+    align-items: stretch;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .presentation .presentationPlans .plan {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1023px) {
+  section .content {
+    padding: 50px 35px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .presentation .presentationContent {
+    padding: 80px;
+  }
+}
